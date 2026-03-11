@@ -1,0 +1,119 @@
+import SectionHeading from "@/components/ui/SectionHeading"
+import Card from "@/components/ui/Card"
+import FadeIn from "@/components/ui/FadeIn"
+
+export default function EducationPage() {
+  return (
+    <>
+      {/* Gradient background for depth */}
+      <div className="fixed inset-0 bg-gradient-to-b from-gray-300 via-gray-200 to-gray-300 -z-10" />
+
+      <section className="min-h-screen py-24 flex justify-center">
+        <div className="max-w-4xl w-full space-y-20">
+
+          {/* Page Title */}
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-gray-900">Education</h1>
+            <p className="text-xl text-gray-700 mt-2">
+              Academic foundation supporting applied AI engineering and large-scale data systems.
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative space-y-16 border-l-2 border-gray-400 pl-8">
+
+            {/* Master Degree */}
+            <FadeIn>
+              <div className="relative">
+                <div className="absolute w-4 h-4 bg-gray-600 rounded-full -left-2 top-6" />
+
+                <Card className="bg-gray-50 p-6 border border-gray-300 shadow-xl hover:shadow-2xl rounded-xl transition-all">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-gray-900">
+                        Master of Science in Analytics — AI Specialization
+                      </h3>
+                      <p className="text-sm text-gray-600 mt-1 italic">
+                        Georgia Institute of Technology · Georgia, United States
+                      </p>
+                    </div>
+                    <span className="text-sm text-gray-600 italic">
+                      Aug 2024 – Present
+                    </span>
+                  </div>
+
+                  <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                    Graduate program focused on artificial intelligence, advanced analytics,
+                    and large-scale data systems with emphasis on practical machine learning
+                    applications and real-world problem solving.
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {[
+                      "Artificial Intelligence",
+                      "Machine Learning",
+                      "Data Systems",
+                      "Advanced Analytics",
+                    ].map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 bg-gray-200 rounded-full text-gray-700 text-xs"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </Card>
+              </div>
+            </FadeIn>
+
+            {/* Bachelor Degree */}
+            <FadeIn>
+              <div className="relative">
+                <div className="absolute w-4 h-4 bg-gray-600 rounded-full -left-2 top-6" />
+
+                <Card className="bg-gray-50 p-6 border border-gray-300 shadow-xl hover:shadow-2xl rounded-xl transition-all">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-gray-900">
+                        Bachelor of Technology in Information Technology
+                      </h3>
+                      <p className="text-sm text-gray-600 mt-1 italic">
+                        Charusat University · Gujarat, India
+                      </p>
+                    </div>
+                    <span className="text-sm text-gray-600 italic">
+                      2019 – 2023
+                    </span>
+                  </div>
+
+                  <p className="mt-4 text-gray-700 text-sm leading-relaxed">
+                    Undergraduate program focused on computer science fundamentals,
+                    including software engineering, algorithms, and applied information
+                    technology.
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {[
+                      "Computer Science",
+                      "Software Engineering",
+                      "Data Structures",
+                    ].map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 bg-gray-200 rounded-full text-gray-700 text-xs"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </Card>
+              </div>
+            </FadeIn>
+
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
