@@ -67,3 +67,15 @@ li {
   transform: translateY(-1px);
   filter: drop-shadow(0 6px 10px rgba(0,0,0,0.12));
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+/* Navbar elevation when scrolling */
+header {
+  box-shadow: none;
+}
+
+body.scrolled header {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}

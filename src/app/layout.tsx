@@ -2,7 +2,7 @@ import "./globals.css"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Providers from "@/components/Providers"
-
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton"
 export default function RootLayout({
   children,
 }: {
@@ -17,6 +17,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <ScrollToTopButton />
         </Providers>
       </body>
     </html>
