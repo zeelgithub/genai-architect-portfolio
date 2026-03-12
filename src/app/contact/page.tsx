@@ -7,23 +7,32 @@ export default function ContactPage() {
     <section className="space-y-10 max-w-3xl">
       <SectionHeading
         title="Contact"
-        subtitle="Let’s talk about AI systems, architecture, or collaboration."
+        subtitle="Let’s collaborate on building intelligent solutions that matter."
       />
 
       <Card>
-        <p className="text-gray-600">
-          I’m open to discussions around Generative AI, system design,
-          research collaboration, and engineering roles.
+        <p className="text-center text-gray-600 dark:text-gray-300">
+          Interested in AI systems and scalable architectures. Let’s connect.
         </p>
 
-        <div className="mt-6 flex gap-3">
-          <Button href="mailto:your@email.com">
+        <div className="mt-6 flex justify-center gap-3">
+          <Button
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=zeelamrutiya045@gmail.com&su=Portfolio%20Inquiry"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
             Email Me
-          </Button>
+        </Button>
 
-          <Button href="https://www.linkedin.com/" target="_blank">
+          
+        <Button
+            href="https://www.linkedin.com/in/zeel-amrutiya-5a03b0203/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
             LinkedIn
-          </Button>
+        </Button>
+
         </div>
       </Card>
     </section>

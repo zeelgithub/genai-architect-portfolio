@@ -19,19 +19,19 @@ export default function HomePage() {
         {/* HERO */}
         <div className="max-w-4xl space-y-5">
           <div className="flex flex-wrap gap-2">
-            <Badge>Generative AI Engineer</Badge>
-            <Badge>AI Architect</Badge>
-            <Badge>LLMs • Agents • RAG • MLOps</Badge>
-            <Badge>Azure • AWS</Badge>
-          </div>
+  <Badge>Generative AI Architect</Badge>
+  <Badge>LLMs • Agents • RAG • MLOps</Badge>
+</div>
 
-          <h1 className="text-4xl font-semibold leading-tight">
-            I build production grade GenAI systems that are reliable, secure, and scalable.
+          <h1 className="text-4xl font-semibold leading-tight text-gray-900 dark:text-gray-100">
+            I design and build production-grade generative AI systems
+with strong observability and robust system architectures.
           </h1>
 
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-            From multi agent LLM workflows and enterprise RAG platforms to cloud native
-            MLOps pipelines — I design systems that move from research to real world deployments.
+           From multi-agent LLM orchestration systems to enterprise RAG platforms
+and cloud-native MLOps pipelines, I design and deploy production
+generative AI systems for real-world applications.
           </p>
 
           {/* Change these to anchors so they scroll */}
@@ -47,24 +47,24 @@ export default function HomePage() {
         <div className="space-y-4">
           <SectionHeading
             title="Highlights"
-            subtitle="What you can expect from my work and how I think as an AI architect."
+            subtitle="How I approach AI architecture, from design to deployment."
           />
 
           <div className="grid gap-4 md:grid-cols-3">
             <Card title="Agentic Systems">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
                 Multi agent orchestration, tool use, structured outputs, and guardrails.
               </p>
             </Card>
 
             <Card title="Grounded GenAI">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
                 RAG pipelines, evidence grounding, evaluation, and hallucination mitigation.
               </p>
             </Card>
 
             <Card title="Cloud & MLOps">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
                 Deployments on Azure/AWS with CI/CD, monitoring, and compliance first design.
               </p>
             </Card>

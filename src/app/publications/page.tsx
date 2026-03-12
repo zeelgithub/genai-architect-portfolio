@@ -6,12 +6,15 @@ export default function PublicationsPage() {
     <section className="space-y-12 max-w-4xl mx-auto px-6 py-10">
       <SectionHeading
         title="Publications"
-        subtitle="Peer-reviewed research and technical publications."
+       
       />
 
       {/* ================= Peer-Reviewed ================= */}
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Peer-Reviewed</h2>
+       
+        <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100">
+            Publications
+        </h1>
 
         <Card>
           <div className="space-y-4">
@@ -55,7 +58,7 @@ export default function PublicationsPage() {
 
       {/* ================= Preprints / Technical Reports ================= */}
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold">Preprints & Technical Reports</h2>
+       
 
         <Card>
           <div className="space-y-4">

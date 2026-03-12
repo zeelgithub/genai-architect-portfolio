@@ -13,9 +13,12 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <Providers>
           <Navbar />
-          <main className="flex-1 container mx-auto px-6 py-16 space-y-16">
-            {children}
-          </main>
+          <main className="
+  flex-1 container mx-auto px-6 py-16 space-y-2
+  text-gray-900 dark:text-gray-100
+">
+  {children}
+</main>
           <Footer />
           <ScrollToTopButton />
         </Providers>

@@ -8,9 +8,7 @@ export default function Card({
   className?: string
 }) {
   return (
-    <div
-      className={`rounded-xl border bg-white dark:bg-gray-900 p-8 shadow-sm hover:shadow-md transition ${className}`}
-    >
+    <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-8 shadow-sm">
       {title && <h3 className="mb-3">{title}</h3>}
       <div className="space-y-4">{children}</div>
     </div>

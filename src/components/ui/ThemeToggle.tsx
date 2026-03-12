@@ -13,12 +13,24 @@ export default function ThemeToggle() {
 
   if (!mounted) return null
 
+  const isDark = theme === "dark"
+
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-md border px-3 py-1 text-xs text-gray-700 dark:text-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label="Toggle dark mode"
+      className="
+        p-2 rounded-md
+        text-gray-700 dark:text-gray-200
+        hover:bg-gray-100 dark:hover:bg-gray-800
+        transition
+      "
     >
-      {theme === "dark" ? "Light" : "Dark"}
+      {isDark ? (
+        <span aria-hidden>☀️</span>
+      ) : (
+        <span aria-hidden>🌙</span>
+      )}
     </button>
   )
 }

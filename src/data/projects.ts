@@ -68,7 +68,7 @@ export const projects: Project[] = [
     ],
     outcomes:
       "Achieved 84% precision and recall for fracture detection/classification, improving upon a previous 79% benchmark. Supported seven fracture categories and packaged the workflow into a web application for interactive use.",
-    repoUrl: "https://github.com/zeelgithub/bonex", // <-- replace if your BoneX repo URL differs
+    repoUrl: "https://github.com/zeelgithub/BoneX-AnMultiBoneFractureDetectionSystem", // <-- replace if your BoneX repo URL differs
     tags: ["Computer Vision", "Medical Imaging", "Transformers","Deep Learning", "Flask"],
     highlights: [
       "7 fracture categories supported",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
   ],
   outcomes:
     "Reduced response latency and LLM usage by routing simple queries directly to tools and APIs. Demonstrated a scalable, cost-aware agent orchestration pattern suitable for real-world travel planning systems.",
-  repoUrl: "https://github.com/<your-username>/travelbuddy", // replace with your real repo
+  repoUrl: "https://github.com/zeelgithub/travel-buddy", // replace with your real repo
   tags: ["Multi Agent Systems", "LLM Orchestration", "Cost Optimization", "Streamlit"],
   highlights: [
     "Supervisor agent orchestration",
