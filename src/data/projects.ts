@@ -38,13 +38,53 @@ export const projects: Project[] = [
     outcomes:
       "Enables repeatable, traceable analysis of research papers for literature reviews, reproducibility checks, and due diligence workflows.",
     repoUrl: "https://github.com/zeelgithub/grounded-research-assistant",
-    tags: ["Agents", "RAG", "LangGraph", "Ollama"],
+    tags: ["Parallel Agents", "RAG", "LangGraph", "HITL"],
     highlights: [
       "Agentic workflow (plan → fan out → review → compile)",
       "Evidence grounded outputs with retrieval",
       "Interactive architecture diagram + HITL loop",
     ],
   },
+  {
+  slug: "autonomous-debugger-assistant",
+  title: "Autonomous Debugger Assistant",
+  summary:
+    "A deterministic, multi-agent AI system that autonomously analyzes software failures, identifies root causes, generates safe code fixes, and validates them using a LangGraph-controlled execution loop.",
+  problem:
+    "Debugging software failures is a manual, time-consuming, and error-prone process. Engineers must inspect logs, stack traces, failed tests, and repository context to identify root causes and propose fixes. This work does not scale and repeatedly consumes senior engineering time for routine issues.",
+  solution:
+    "A multi-agent debugging system that autonomously understands failures, locates root causes in code, generates minimal fixes, validates them through tests, and iterates deterministically using an explicit state machine.",
+  architecture: [
+    "LangGraph state machine orchestrating agent execution with explicit nodes and edges.",
+    "Planner, analyzer, fixer, and evaluator agents modeled as first-class graph nodes.",
+    "Evaluator-controlled retry loop to ensure bounded and deterministic execution.",
+    "Architectural guardrails enforcing safe inputs and patch constraints.",
+    "Tool-isolated execution for repository access, patching, and test runs.",
+  ],
+  decisions: [
+    "Model debugging as an explicit state machine instead of implicit LLM chaining.",
+    "Centralize all retry and termination decisions in a single Evaluator agent.",
+    "Enforce structured, schema-validated LLM outputs to prevent unsafe patches.",
+    "Treat safety guardrails as architectural components rather than prompt logic.",
+    "Separate agent reasoning from tool execution to avoid uncontrolled side effects.",
+  ],
+  outcomes:
+    "Automates routine debugging workflows, reduces time to root-cause identification, produces safe and minimal code fixes, and iteratively improves solutions without human intervention.",
+  repoUrl: "https://github.com/zeelgithub/autonomous-debugger-assistant", // ✅ update if needed
+  tags: [
+    "LangGraph",
+    "Guardrails",
+    "LLMOps",
+    "System Design",
+    "Production AI",
+  ],
+  highlights: [
+    "Evaluator-driven bounded retry loop ensuring convergence",
+    "Structured system for coordinating multi-agent workflow",
+    "Safety guardrails for controlled autonomous code changes",
+  ],
+},
+
 
   {
     slug: "bonex",
@@ -69,13 +109,14 @@ export const projects: Project[] = [
     outcomes:
       "Achieved 84% precision and recall for fracture detection/classification, improving upon a previous 79% benchmark. Supported seven fracture categories and packaged the workflow into a web application for interactive use.",
     repoUrl: "https://github.com/zeelgithub/BoneX-AnMultiBoneFractureDetectionSystem", // <-- replace if your BoneX repo URL differs
-    tags: ["Computer Vision", "Medical Imaging", "Transformers","Deep Learning", "Flask"],
+    tags: ["Computer Vision", "Medical Imaging", "Transformers"],
     highlights: [
       "7 fracture categories supported",
       "84% precision/recall (vs 79% baseline)",
       "Deployed workflow: upload → diagnosis",
     ],
   },
+  
 
 {
   slug: "travelbuddy",
@@ -100,7 +141,7 @@ export const projects: Project[] = [
   outcomes:
     "Reduced response latency and LLM usage by routing simple queries directly to tools and APIs. Demonstrated a scalable, cost-aware agent orchestration pattern suitable for real-world travel planning systems.",
   repoUrl: "https://github.com/zeelgithub/travel-buddy", // replace with your real repo
-  tags: ["Multi Agent Systems", "LLM Orchestration", "Cost Optimization", "Streamlit"],
+  tags: [ "LLM Orchestration", "Cost Optimization", "Langchain"],
   highlights: [
     "Supervisor agent orchestration",
     "Intent based routing (LLM vs tools)",
