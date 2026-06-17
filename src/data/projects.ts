@@ -148,4 +148,40 @@ export const projects: Project[] = [
     "Latency and cost optimized execution",
   ],
 },
+
+  {
+    slug: "autonomous-live-trading-system",
+    title: "Claude Autonomous Trading Bot",
+    summary:
+      "An autonomous multi-agent trading system where specialized AI agents perceive market conditions, reason about sentiment, plan a strategy, and execute approved orders, all without a human in the loop for each decision.",
+    problem:
+      "Building a trading system that works is easy. Building one that fails safely at 3am, when data goes stale or an AI returns a wrong signal, is the hard part. Most systems collapse this into one script with no boundaries, which means a bug anywhere can become a live order.",
+    solution:
+      "A layered agentic architecture where each agent has one job and cannot touch what it does not own. The LLM Sentiment Agent reads news and adjusts confidence. The Strategy Selector Agent picks an approach and fires a TradeIntent. The Risk Gatekeeper Agent validates every intent before anything reaches the broker. No agent can bypass another.",
+    architecture: [
+      "Orchestrator manages the state machine, scheduler, and agent lifecycle across the full pipeline.",
+      "Data Ingestor and Feature Store supply clean, point-in-time-correct market data to all downstream agents.",
+      "LLM Sentiment Agent reads live news headlines and returns a confidence signal (-1 / 0 / +1) that informs but never overrides the strategy.",
+      "Regime Classifier Agent detects current market conditions and routes to Trend Following, Mean Reversion, or Breakout.",
+      "Risk Gatekeeper Agent runs pure logic with veto power over every TradeIntent before execution.",
+      "Execution layer receives only pre-approved, pre-sized orders and reconciles every fill back to shared state.",
+    ],
+    decisions: [
+      "Strict agent isolation: the research and strategy agents cannot construct a broker client or place an order.",
+      "LLM used as a confidence modifier, not a decision maker, so non-deterministic outputs never own a capital decision.",
+      "Fail-safe default: on any uncertainty including stale data, disconnect, or reconcile mismatch, the system halts and logs.",
+      "Typed message bus connects all agents so no layer reaches into another's internal state.",
+      "Point-in-time correctness enforced at the data layer so agents never train or decide on future-leaked data.",
+      "Credential isolation: market-data keys and trading keys live in separate modules with no shared access.",
+    ],
+    outcomes:
+      "A fully autonomous trading system that runs live market sessions without human intervention. Agents perceive, reason, plan, and act within strict boundaries. Every decision is logged and auditable. The architecture scales from paper trading to live capital and demonstrates the same agentic design pattern used in production AI systems across finance, DevOps, and autonomous workflows.",
+    repoUrl: "https://github.com/zeelgithub/claude-autonomous-trading-bot",
+    tags: ["Agentic AI", "Risk Management", "Event-Driven", "Production AI", "System Design"],
+    highlights: [
+      "LLM Sentiment Agent reads news and adjusts conviction, never triggers trades",
+      "Regime-aware routing across Trend Following, Mean Reversion, and Breakout",
+      "Risk Gatekeeper Agent vetoes any intent before it reaches the broker",
+    ],
+  },
 ]
