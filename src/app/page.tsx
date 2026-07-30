@@ -3,7 +3,6 @@ import Button from "@/components/ui/Button"
 import Card from "@/components/ui/Card"
 import SectionHeading from "@/components/ui/SectionHeading"
 
-// Reuse your existing route components (no new files)
 import AboutPage from "./about/page"
 import ExperiencePage from "./experience/page"
 import EducationPage from "./education/page"
@@ -16,56 +15,59 @@ export default function HomePage() {
     <>
       {/* HOME */}
       <section id="home" className="space-y-12">
+
         {/* HERO */}
         <div className="max-w-4xl space-y-5">
           <div className="flex flex-wrap gap-2">
-  <Badge>Generative AI Architect</Badge>
-  <Badge>LLMs • Agents • RAG • MLOps</Badge>
-</div>
+            <Badge>AI Consultant Engineer · Deloitte</Badge>
+            <Badge>LLMs · Agents · RAG · LLMOps</Badge>
+          </div>
 
           <h1 className="text-4xl font-semibold leading-tight text-gray-900 dark:text-gray-100">
-            I design and build production-grade generative AI systems
-with strong observability and robust system architectures.
+            Distributed agent systems, enterprise RAG, and cloud-native LLMOps, shipped across NIH, CDC, and VBA.
           </h1>
 
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-           From multi-agent LLM orchestration systems to enterprise RAG platforms
-and cloud-native MLOps pipelines, I design and deploy production
-generative AI systems for real-world applications.
+            Full-stack AI engineering ownership: multi-agent orchestration, REST API design, AWS infrastructure, and observability, built for compliance-regulated, high-availability federal environments.
           </p>
 
-          {/* Change these to anchors so they scroll */}
+          <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm font-medium text-gray-500 dark:text-gray-400">
+            <span>$800K in new federal revenue</span>
+            <span>·</span>
+            <span>76% LLM latency reduction</span>
+            <span>·</span>
+            <span>2nd place · NAWCTSD AI Challenge</span>
+          </div>
+
           <div className="flex gap-3">
             <Button href="/#projects">View Projects</Button>
-            <Button href="/#about" variant="secondary">
-              About Me
-            </Button>
+            <Button href="/#about" variant="secondary">About</Button>
           </div>
         </div>
 
-        {/* HIGHLIGHTS */}
+        {/* CORE COMPETENCIES */}
         <div className="space-y-4">
           <SectionHeading
-            title="Highlights"
-            subtitle="How I approach AI architecture, from design to deployment."
+            title="Core Competencies"
+            subtitle="Engineering disciplines applied across every system shipped."
           />
 
           <div className="grid gap-4 md:grid-cols-3">
             <Card title="Agentic Systems">
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-                Multi agent orchestration, tool use, structured outputs, and guardrails.
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Production multi-agent architectures: supervisor and hierarchical patterns, deterministic state machines, schema-validated tool execution, bounded retry loops, and architectural safety guardrails.
               </p>
             </Card>
 
             <Card title="Grounded GenAI">
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-                RAG pipelines, evidence grounding, evaluation, and hallucination mitigation.
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                Enterprise RAG pipelines with retrieval evaluation, passage-level evidence grounding, hallucination control, and structured output enforcement across regulated production environments.
               </p>
             </Card>
 
-            <Card title="Cloud & MLOps">
-             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
-                Deployments on Azure/AWS with CI/CD, monitoring, and compliance first design.
+            <Card title="Cloud & LLMOps">
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                AWS and Azure production deployments with FISMA-compliant CI/CD gates, model drift detection, inference latency monitoring, and full observability instrumentation via LangFuse and MLflow.
               </p>
             </Card>
           </div>
