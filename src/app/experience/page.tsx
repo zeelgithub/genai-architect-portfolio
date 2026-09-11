@@ -3,27 +3,18 @@ import FadeIn from "@/components/ui/FadeIn"
 
 export default function ExperiencePage() {
   return (
-    <>
-      <div
-        className="fixed inset-0 bg-gradient-to-b
-          from-white via-gray-50 to-gray-100
-          dark:from-gray-950 dark:via-gray-900 dark:to-gray-950
-          -z-10"
-      />
+    <section className="max-w-4xl space-y-12 py-16">
 
-      <section className="py-16 flex justify-center">
-        <div className="max-w-4xl w-full space-y-12">
+      <div>
+        <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100">
+          Experience
+        </h1>
+        <p className="text-xl text-gray-700 dark:text-gray-300 mt-2">
+          Production AI systems across federal health and defense clients.
+        </p>
+      </div>
 
-          <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 dark:text-gray-100">
-              Experience
-            </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300 mt-2">
-              Production AI systems across federal health and defense clients.
-            </p>
-          </div>
-
-          <div className="relative space-y-10 border-l-2 border-gray-300 dark:border-gray-700 pl-8">
+      <div className="relative space-y-10 border-l-2 border-gray-300 dark:border-gray-700 pl-8">
 
             {/* ── Deloitte (single card, two roles) ── */}
             <div className="relative">
@@ -167,9 +158,7 @@ export default function ExperiencePage() {
               </FadeIn>
             </div>
 
-          </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }

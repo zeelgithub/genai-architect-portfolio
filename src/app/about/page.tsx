@@ -1,7 +1,7 @@
 export default function AboutPage() {
   return (
-    <section className="max-w-3xl mx-auto px-6 py-10 space-y-6 text-gray-800 dark:text-gray-200">
-      <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100">
+    <section className="max-w-4xl space-y-6 py-16 text-gray-800 dark:text-gray-200">
+      <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
         About
       </h1>
 

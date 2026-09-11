@@ -212,7 +212,7 @@ export const projects: Project[] = [
     ],
     outcomes:
       "A fully autonomous multi-agent trading system operating across live market sessions with no per-decision human intervention. Every trade intent is logged, risk-gated, and auditable end-to-end. The LLM is isolated as a confidence signal — never as a decision authority — enforcing a hard boundary between non-deterministic reasoning and capital execution. Architecture scales from paper trading to live capital without structural changes.",
-    repoUrl: "https://github.com/zeelgithub/claude-autonomous-trading-bot",
+    repoUrl: "https://github.com/zeelgithub/Trading-AI",
     tags: ["Agentic AI", "Risk Management", "Event-Driven", "Production AI", "System Design"],
     highlights: [
       "LLM Sentiment Agent reads news and adjusts conviction, never triggers trades",
