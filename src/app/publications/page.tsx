@@ -18,7 +18,7 @@ export default function PublicationsPage() {
               Applied fine-tuned ResNet and DenseNet to classify choroidal neovascularization (CNV) from OCT images, with quantified performance benchmarks across architectures for early AMD diagnosis.
             </p>
             <p className="text-xs text-gray-500">
-              Springer · Intelligent Computing / AI · ICTIS'23
+              Springer · Intelligent Computing / AI · ICTIS&apos;23
             </p>
             <a
               href="https://link.springer.com/chapter/10.1007/978-981-99-3758-5_42"

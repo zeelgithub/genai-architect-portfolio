@@ -26,22 +26,23 @@ const variants = {
     "bg-white text-gray-900 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 dark:bg-gray-900 dark:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-800",
 }
 
-export default function Button(props: ButtonProps) {
-  const variant = props.variant ?? "primary"
-  const cls = `${base} ${variants[variant]} ${props.className ?? ""}`
+function classes(variant: keyof typeof variants, className?: string) {
+  return `${base} ${variants[variant]} ${className ?? ""}`
+}
 
+export default function Button(props: ButtonProps) {
   if ("href" in props) {
-    const { href, children, className, variant, ...rest } = props
+    const { href, children, className, variant = "primary", ...rest } = props
     return (
-      <Link href={href} className={cls} {...rest}>
+      <Link href={href} className={classes(variant, className)} {...rest}>
         {children}
       </Link>
     )
   }
 
-  const { onClick, children, className, variant: v, ...rest } = props
+  const { onClick, children, className, variant = "primary", ...rest } = props
   return (
-    <button onClick={onClick} className={cls} {...rest}>
+    <button onClick={onClick} className={classes(variant, className)} {...rest}>
       {children}
     </button>
   )

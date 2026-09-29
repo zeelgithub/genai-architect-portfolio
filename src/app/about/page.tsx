@@ -14,7 +14,7 @@ export default function AboutPage() {
       </p>
 
       <p className="text-gray-600 dark:text-gray-300">
-        Peer-reviewed publication in Springer (ICTIS'23) on transfer learning for medical image classification. Independent projects — autonomous trading systems, multi-agent debugging pipelines, grounded research workflows — are shipped to production and not prototyped.
+        Peer-reviewed publication in Springer (ICTIS&apos;23) on transfer learning for medical image classification. Independent projects — autonomous trading systems, multi-agent debugging pipelines, grounded research workflows — are shipped to production and not prototyped.
       </p>
 
       <p className="text-sm text-gray-500">
